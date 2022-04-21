@@ -1,9 +1,11 @@
-<p>
-  <b>
-    <em>
-      <%= comment.commenter %>
-    </em>
-  </b>
-  <br>
-  <%= comment.body %>
-</p>
+<% unless comment.archived? %>
+  <p>
+    <b>
+      <em>
+        <%= comment.commenter %>
+      </em>
+    </b>
+    <br>
+    <%= comment.body %>
+  </p>
+<% end %>
